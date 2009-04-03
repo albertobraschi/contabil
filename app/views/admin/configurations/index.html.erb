@@ -1,0 +1,24 @@
+<h1>Listing configurations</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Email</th>
+    <th>Fone</th>
+    <th>Text</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @configurations.each do |configuration| %>
+  <tr>
+    <td><%=h configuration.title %></td>
+    <td><%=h configuration.email %></td>
+    <td><%=h configuration.fone %></td>
+    <td><%=h configuration.text %></td>
+    <td><%= link_to 'Show', [:admin,configuration] %></td>
+    <td><%= link_to 'Edit', edit_admin_configuration_path(configuration) %></td>
+  </tr>
+<% end %>
+</table>

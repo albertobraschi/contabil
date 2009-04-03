@@ -1,0 +1,14 @@
+﻿<% form_for([:admin,@archive], :html => { :multipart => true } ) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+	<%= f.select(:costumer_id, Costumer.find(:all).collect { |item| [item.razao_social,item.id]}, {:include_blank => 'Escolha um Cliente'})%>
+  
+	<%= f.select(:catarc_id, Catarc.find(:all).collect { |item| [item.name,item.id]}, {:include_blank => 'Escolha uma Categoria'})%>
+  </p>
+  <p>
+    <%= f.file_field :file %>
+  
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>

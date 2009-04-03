@@ -1,0 +1,26 @@
+<% @page_title = "Listing costumers" %>
+
+
+<div class="float_right">
+<%= link_to 'New costumer', new_admin_costumer_path %>
+</div>
+<h1>Listing costumers</h1>
+
+<table>
+  <tr>
+    <th>Razao social</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @costumers.each do |costumer| %>
+  <tr id="<%= dom_id(costumer)%>">
+    <td><%=h costumer.razao_social %></td>
+    <td><%= link_to 'Edit', edit_admin_costumer_path(costumer) %></td>
+    <td><%= link_to_remote 'Destroy', :url => admin_costumer_path(costumer),
+							:confirm => 'Are you sure?', 
+							:method => :delete %>
+	</td>
+  </tr>
+<% end %>
+</table>

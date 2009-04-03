@@ -1,0 +1,18 @@
+
+<fieldset class="columnar">
+	<legend>Please Log In</legend>
+		<% form_tag :login, :class => "yform" do %>
+			<div class="type-text">
+                <label for="name">Name:</label>
+                <%= text_field_tag :name, params[:name] %>
+			</div>
+			<div class="type-text">
+               <label for="password">Password:</label>
+				<%= password_field_tag :password, params[:password] %>
+			</div>
+			<div class="type-button">
+				<%= submit_tag "Login" %>
+            </div>
+		<% end %>
+	</span>
+</fieldset>

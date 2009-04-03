@@ -1,0 +1,26 @@
+<% @page_title = "Listing Archives" %>
+
+
+	
+	<%= render :partial => "form" %>
+	
+
+<br />
+
+<h2>Listing archives</h2>
+
+<table>
+  <tr>
+    <th>File name</th>
+    <th>Content type</th>
+    <th>File size</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @archives.each do |archive| %>
+	
+	<%= render :partial => "list", :locals => {:archive => archive}%>
+	
+<% end %>
+</table>

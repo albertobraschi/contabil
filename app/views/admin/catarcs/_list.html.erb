@@ -1,0 +1,5 @@
+<tr id="<%= dom_id(catarc)%>">
+    <td><%=h catarc.name %></td>
+    <td><%= link_to 'Edit', edit_admin_catarc_path(catarc) %></td>
+    <td><%= link_to_remote 'Destroy', :url=>admin_catarc_path(catarc),  :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>

@@ -1,0 +1,17 @@
+﻿
+<% remote_form_for([:admin,@notice], :builder => ValidatingFormBuilder) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+	<%= f.select(:costumer_id, Costumer.find(:all).collect { |item| [item.razao_social,item.id]}, {:include_blank => 'Escolha um Cliente'})%>
+  </p>
+  <p>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.text_area :text %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>

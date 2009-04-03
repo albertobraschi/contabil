@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Users: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'estilo' %>
+<!--[if lte IE 7]>
+<link href="css/patches/patch_2col_left_13.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+<body id="login">
+<div class="page_margins">
+  <div class="page">
+	 <div id="header">
+       <h1><%= image_tag("logo.png") %></h1>
+	  </div>
+	<!-- begin: main content area #main -->
+    <div id="main">
+
+			<%= yield %>
+	
+    </div>
+    <!-- end: #main -->
+    <!-- begin: #footer -->
+	<div id="footer">
+		<span class="float_left">Aplicativo para Contabilidade </span>
+		<span class="float_right">&copy <a href="http://www.octagonoecommerce.com.br/">Octagono Tecnologia</a></span>
+		<hr />
+	</div>
+    <!-- end: #footer -->
+  </div>
+</div>
+</body>
+</html>

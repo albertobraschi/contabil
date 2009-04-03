@@ -1,0 +1,6 @@
+  <tr id="<%= dom_id(archive)%>">
+    <td><%=h archive.file_file_name %></td>
+    <td><%=h archive.file_content_type %></td>
+    <td><%=h archive.file_file_size %></td>
+    <td><%= link_to_remote 'Destroy', :url=>admin_archive_path(archive), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>

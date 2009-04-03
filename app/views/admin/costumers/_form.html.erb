@@ -1,0 +1,83 @@
+﻿
+
+<% form_for([:admin,@costumer], :html => { :multipart => true }, :builder => ValidatingFormBuilder) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+ 
+    <%= f.text_field :razao_social %>
+  </p>
+  <p>
+    <%= f.text_field :nome_fantasia %>
+  </p>
+  <p>
+    <%= f.text_field :cnpj %>
+  </p>
+  <p>
+    <%= f.text_field :inscricao_estadual %>
+  </p>
+  <p>
+    <%= f.text_field :inscricao_municipal %>
+  </p>
+  <p>
+    <%= f.text_field :responsavel %>
+  </p>
+  <p>
+    <%= f.text_field :cep %>
+  </p>
+  <p>
+    <%= f.text_field :endereco %>
+  </p>
+  <p>
+    <%= f.text_field :numero %>
+  </p>
+  <p>
+    <%= f.text_field :complemento %>
+  </p>
+  <p>
+    <%= f.text_field :bairro %>
+  </p>
+  <p>
+    <%= f.text_field :cidade %>
+  </p>
+  <p>
+    <%= f.text_field :estado %>
+  </p>
+  <p>
+    <%= f.text_field :telefone1 %>
+  </p>
+  <p>
+    <%= f.text_field :telefone2 %>
+  </p>
+  <p>
+    <%= f.text_field :telefone3 %>
+  </p>
+  
+  <p>
+    <%= f.label :ramo_atividade %>
+	<%= f.select(:branch_id, Activity.find(:all).collect { |item| [item.branch,item.id]}, {:include_blank => 'Escolha um Ramo'})%>
+  </p>
+  
+  <% fields_for :user do |u| %>
+	<p>
+	<label for="costumer_user">User:</label> 
+	<%= u.text_field :name %>
+  </p>
+  <p>
+    <label for="costumer_email">Email:</label> 
+    <%= u.text_field :email %>
+  </p>
+  <p>
+	<label for="costumer_password">Password:</label> 
+	<%= u.password_field :password %>
+  </p>
+  <p>
+    <label for="costumer_password_confirmation">Confirm:</label>
+    <%= u.password_field :password_confirmation %>
+  </p>
+  <% end %>
+  
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>

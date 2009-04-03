@@ -1,0 +1,18 @@
+<% @page_title = "Listing notices" %>
+
+<h1>Listing notices</h1>
+
+<table id="tabela">
+  <tr>
+	<th>Title</th>
+    <th>Data</th>
+    <th></th>
+  </tr>
+
+<% @notices.each do |notice| %>
+	<%= render :partial => "list", :locals => {:notice => notice} %>
+<% end %>
+</table>
+<br />
+<h2>New notice</h2>
+<%= render :partial => "form" %>

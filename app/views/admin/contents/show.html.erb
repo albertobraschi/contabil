@@ -1,0 +1,18 @@
+<p>
+  <b>Title:</b>
+  <%=h @content.title %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%=h @content.text %>
+</p>
+
+<p>
+  <b>Source:</b>
+  <%=h @content.source %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_content_path(@content) %> |
+<%= link_to 'Back', admin_contents_path %>

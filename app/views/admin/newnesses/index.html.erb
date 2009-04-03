@@ -1,0 +1,23 @@
+<% @page_title = "Listing newnesses" %>
+<div class="float_right">
+	<%= link_to 'New newness', new_admin_newness_path %>
+</div>
+<h1>Listing newnesses</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+	<th>Data</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @newnesses.each do |newness| %>
+  <tr>
+	<td><%=link_to newness.title, admin_newness_path(newness) %></td>
+	<td><%=h newness.created_at.to_s(:chatty) %></td>
+    <td><%= link_to 'Edit', edit_admin_newness_path(newness) %></td>
+    <td><%= link_to 'Destroy', [:admin,newness], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

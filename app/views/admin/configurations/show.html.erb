@@ -1,0 +1,24 @@
+<p>
+  <b>Title:</b>
+  <%=h @configuration.title %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @configuration.email %>
+</p>
+
+<p>
+  <b>Fone:</b>
+  <%=h @configuration.fone %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%=h @configuration.text %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_admin_configuration_path(@configuration) %> |
+<%= link_to 'Back', admin_configurations_path %>

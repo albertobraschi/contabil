@@ -1,0 +1,10 @@
+<% remote_form_for([:admin,@activity], :builder => ValidatingFormBuilder) do |f| %>
+  <%=  %>
+  <div id="notice" <%= 'style="display:none;"' unless f.error_messages%> ><%= f.error_messages %></div>
+  <p>
+    <%= f.text_field :branch %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>

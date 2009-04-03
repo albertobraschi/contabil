@@ -1,0 +1,31 @@
+9
+
+dir
+17
+svn://rubyforge.org/var/svn/valirefl/validation_reflection/trunk/lib
+svn://rubyforge.org/var/svn/valirefl
+
+
+
+2009-02-06T22:53:54.393791Z
+17
+mschuerig
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+355ff614-fa1a-0410-b54d-97652ed5f502
+
+boiler_plate
+dir
+

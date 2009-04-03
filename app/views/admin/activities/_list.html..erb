@@ -1,0 +1,4 @@
+<tr id="<%= dom_id(activity)%>">
+	<td><%=h activity.branch %></td>
+	<td><%= link_to_remote 'Destroy', :url=>admin_activity_path(activity), :confirm => 'Are you sure?', :method => :delete %></td>
+</tr>

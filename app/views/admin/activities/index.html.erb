@@ -1,0 +1,27 @@
+<% @page_title = "Listing Activities" %>
+<div class="float_right">
+<% remote_form_for([:admin,@activity]) do |f| %>
+  <%= f.error_messages %>
+  <p>
+	<label for="branch">New Branch:</label>
+    <%= f.text_field :branch %>
+  </p>
+<% end %>
+</div>
+<br />
+<h1>Listing activities</h1>
+
+<table id="tabela">
+  <tr>
+    <th>Branch</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @activities.each do |activity| %>
+  <%=  render :partial => "list", :locals => {:activity => activity } %>
+<% end %>
+</table>
+
+<br />
+

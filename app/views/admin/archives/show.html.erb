@@ -1,0 +1,20 @@
+<p>
+  <b>File name:</b>
+  <%=h @archive.file_file_name %>
+</p>
+
+<p>
+  <b>Content type:</b>
+  <%=h @archive.file_content_type %>
+</p>
+
+<p>
+  <b>File size:</b>
+  <%=h @archive.file_file_size %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_admin_archive_path(@archive) %> |
+<%= link_to 'Back', admin_archives_path %>

@@ -1,0 +1,3 @@
+page.insert_html :bottom, "tabela" , :partial => "list", :locals =>{:archive => 
+@archive}
+page.visual_effect :highlight, dom_id(@archive)

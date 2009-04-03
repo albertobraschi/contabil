@@ -1,0 +1,8 @@
+<tr id="<%= dom_id(notice)%>" >
+    <td><%= link_to notice.title, admin_notice_path(notice) %></td>
+    <td><%=h notice.created_at.to_s(:chatty) %></td>
+	<td><%= link_to_remote 'Destroy', :url => admin_notice_path(notice),
+							:confirm => 'Are you sure?', 
+							:method => :delete %>
+	</td>
+  </tr>

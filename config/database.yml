@@ -1,0 +1,30 @@
+
+development:
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: contabil_development
+  pool: 5
+  username: root
+  password:
+  host: localhost
+
+test:
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: contabil_test
+  pool: 5
+  username: root
+  password:
+  host: localhost
+
+production:
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: contabil_production
+  pool: 5
+  username: root
+  password: 
+  host: localhost

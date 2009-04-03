@@ -1,0 +1,13 @@
+<p>
+  <b>Title:</b>
+  <%=h @newness.title %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%=h @newness.text %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_newness_path(@newness) %> |
+<%= link_to 'Back', admin_newnesses_path %>
